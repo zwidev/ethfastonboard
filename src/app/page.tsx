@@ -23,7 +23,7 @@ export default function Home() {
       
       <div className="text-center mb-4">
         <p className="text-sm text-white">
-          🔒 Secure payments powered by Thirdweb
+          🔒 Secure payments powered by Zenpay
           <br/>
           ✓ Licensed and regulated crypto exchange
         </p>
