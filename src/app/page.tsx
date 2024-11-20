@@ -13,10 +13,10 @@ export default function Home() {
   };
 
   return (
-    <div className="relative flex h-screen flex-col items-center justify-center gap-8">
+    <div className="relative flex h-screen flex-col items-center justify-center gap-8 pt-16">
       <h1 className="text-2xl font-bold mb-4 z-10">
         {isWalletConnected 
-          ? "Now you have a wallet. Now buy PZEN with a credit or debit card"
+          ? "Now you have a wallet. Buy PZEN with a credit or debit card"
           : "Welcome to Fastest way to Buy PZEN"
         }
       </h1>
