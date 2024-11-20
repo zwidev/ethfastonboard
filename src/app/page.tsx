@@ -1,12 +1,8 @@
 "use client";
-import { ConnectButton, PayEmbed } from "thirdweb/react";
+import { ConnectButton, PayEmbed, PayEmbedProps } from "thirdweb/react";
 import { client } from "./client";
-import { inAppWallet } from "thirdweb/wallets";
 import { sepolia } from "thirdweb/chains";
-import { useSendTransaction } from 'thirdweb/react';
-import { prepareTransaction } from 'thirdweb';
-import { parseEther } from 'ethers/lib/utils';
-import { SmartWalletOptions } from "thirdweb/wallets";
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Home() {
@@ -46,11 +42,23 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <div className="flex gap-8 mb-4">
             <div className="flex flex-col items-center">
-              <img src="/secure-badge.svg" alt="Security Badge" className="h-12 mb-2" />
+              <Image 
+                src="/secure-badge.svg" 
+                alt="Security Badge" 
+                width={48}
+                height={48}
+                className="mb-2"
+              />
               <span className="text-sm text-white">Fully Secure</span>
             </div>
             <div className="flex flex-col items-center">
-              <img src="/encryption-badge.svg" alt="Encryption Badge" className="h-12 mb-2" />
+              <Image 
+                src="/encryption-badge.svg" 
+                alt="Encryption Badge" 
+                width={48}
+                height={48}
+                className="mb-2"
+              />
               <span className="text-sm text-white">Military Grade Encryption</span>
             </div>
           </div>
@@ -83,7 +91,7 @@ export default function Home() {
                   chain: false
                 }
               }
-            } as any}
+            } satisfies PayEmbedProps['payOptions']}
             className="w-[400px] z-10"
           />
         </div>
