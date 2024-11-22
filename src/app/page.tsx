@@ -1,7 +1,7 @@
 "use client";
 import { ConnectButton, PayEmbed, PayEmbedProps } from "thirdweb/react";
 import { client } from "./client";
-import { sepolia } from "thirdweb/chains";
+import { mainnet } from "thirdweb/chains";
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -32,7 +32,7 @@ export default function Home() {
       <div className="z-10">
         <ConnectButton 
           client={client} 
-          chain={sepolia}
+          chain={mainnet}
           onConnect={() => handleWalletConnection(true)}
           onDisconnect={() => handleWalletConnection(false)}
         />
@@ -71,7 +71,7 @@ export default function Home() {
                 testMode: false
               }, 
               buyWithFiat: {
-                testMode: true,
+                testMode: false,
               },
               metadata: {
                 name: "Purchase Token",
@@ -83,8 +83,8 @@ export default function Home() {
                   symbol: "PZEN",
                   icon: "https://ipfs.io/ipfs/QmbNiTc4QVoKZSwk9iUbmqc4JDBvoYqbg6tzhgDZ1GZtAH",
                 },
-                amount: "100",
-                chain: sepolia,
+                amount: "100000",
+                chain: mainnet,
                 allowEdits: {
                   amount: true,
                   token: false,
