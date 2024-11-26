@@ -35,6 +35,10 @@ export default function Home() {
           chain={mainnet}
           onConnect={() => handleWalletConnection(true)}
           onDisconnect={() => handleWalletConnection(false)}
+          connectModal={{
+            size: "compact",
+            showThirdwebBranding: false,
+          }}
         />
       </div>
       
