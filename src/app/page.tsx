@@ -83,7 +83,7 @@ export default function Home() {
                   icon: "https://ipfs.io/ipfs/QmbNiTc4QVoKZSwk9iUbmqc4JDBvoYqbg6tzhgDZ1GZtAH",
                  
                 },
-                amount: "100000000000",
+                amount: "100000",
                 chain: mainnet,
                 allowEdits: {
                   amount: true,
