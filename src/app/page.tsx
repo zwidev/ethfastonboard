@@ -68,22 +68,22 @@ export default function Home() {
             client={client} 
             payOptions={{
               buyWithCrypto: {
-                testMode: false
+               
               }, 
-              buyWithFiat: {
-                testMode: false,
-              },
+              buyWithFiat: {},
+              
               metadata: {
                 name: "Purchase Token",
               },
               prefillBuy: {
                 token: {
-                  address: "0xF4F3DDd4Ed305A32960e676e22939Ced435cdd90",
+                  address: "0x5a24D7129B6f3FcAd2220296df28911880AD22B0",
                   name: "Pulse Zen",
                   symbol: "PZEN",
                   icon: "https://ipfs.io/ipfs/QmbNiTc4QVoKZSwk9iUbmqc4JDBvoYqbg6tzhgDZ1GZtAH",
+                 
                 },
-                amount: "100000",
+                amount: "100000000000",
                 chain: mainnet,
                 allowEdits: {
                   amount: true,
