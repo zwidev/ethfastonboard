@@ -32,6 +32,7 @@ export default function Home() {
       <div className="z-10">
         <ConnectButton 
           client={client} 
+          accountAbstraction={{ chain: mainnet, sponsorGas: true }}
           chain={mainnet}
           onConnect={() => handleWalletConnection(true)}
           onDisconnect={() => handleWalletConnection(false)}
